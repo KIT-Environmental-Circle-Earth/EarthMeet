@@ -14,7 +14,7 @@ When you find an issue which you can fix, please fork this repository and make a
 
 Please feel free to add new issue when you find a new issue which is not in [Issues](https://github.com/KIT-Environmental-Circle-Earth/EarthMeet/issues).
 
-### Step 2: Beginning the edition.
+### Step 2: Beginning to Edit.
 
 Please make a new branch before you make changes on the repository.
 
