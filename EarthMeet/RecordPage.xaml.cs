@@ -38,6 +38,17 @@ namespace EarthMeet
         public RecordPage()
         {
             InitializeComponent();
+            MainGrid.Drop += MainGrid_Drop;
+        }
+
+        private async void MainGrid_Drop(object sender, DragEventArgs e)
+        {
+            if (e.DataView.Contains(Windows.ApplicationModel.DataTransfer.StandardDataFormats.StorageItems))
+            {
+                IReadOnlyList<IStorageItem> storageItems = await e.DataView.GetStorageItemsAsync();
+                if ((storageItems.OfType<StorageFile>().Count() > 0) && (viewModel is not null))
+                    viewModel.SetDroppedVoiceFile(storageItems.OfType<StorageFile>().First());
+            }
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

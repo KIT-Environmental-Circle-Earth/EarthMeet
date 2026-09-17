@@ -58,6 +58,14 @@ namespace EarthMeet.Bus.ViewModels
             return (MediaRecording is null) && (recordData.VoiceDataFile is null);
         }
 
+        public void SetDroppedVoiceFile(StorageFile storageFile)
+        {
+            recordData.VoiceDataFile = storageFile;
+            RecordCommand.NotifyCanExecuteChanged();
+            GetTextCommand.NotifyCanExecuteChanged();
+            UploadFileCommand.NotifyCanExecuteChanged();
+        }
+
         [RelayCommand(AllowConcurrentExecutions = false, CanExecute = nameof(CanGetText))]
         private async Task GetTextAsync()
         {
