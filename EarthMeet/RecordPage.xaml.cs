@@ -39,6 +39,12 @@ namespace EarthMeet
         {
             InitializeComponent();
             MainGrid.Drop += MainGrid_Drop;
+            MainGrid.DragOver += MainGrid_DragOver;
+        }
+
+        private void MainGrid_DragOver(object sender, DragEventArgs e)
+        {
+            e.AcceptedOperation = Windows.ApplicationModel.DataTransfer.DataPackageOperation.Copy;
         }
 
         private async void MainGrid_Drop(object sender, DragEventArgs e)
