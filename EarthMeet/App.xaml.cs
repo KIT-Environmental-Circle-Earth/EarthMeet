@@ -55,6 +55,9 @@ namespace EarthMeet
         protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
             _window = new MainWindow();
+            Environment.SetEnvironmentVariable("GOOGLE_API_KEY", null, EnvironmentVariableTarget.Process);
+            Environment.SetEnvironmentVariable("GEMINI_API_KEY", null, EnvironmentVariableTarget.Process);
+
             if (ApplicationData.GetDefault().LocalSettings.Values["API_KEY"] is string apiKey)
                 Ioc.Default.ConfigureServices(GetService(apiKey));
             _window.Activate();
