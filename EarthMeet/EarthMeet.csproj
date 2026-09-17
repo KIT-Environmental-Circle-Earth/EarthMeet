@@ -40,6 +40,12 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
     <PackageReference Include="CommunityToolkit.WinUI.Controls.SettingsControls" Version="8.2.251219" />
     <PackageReference Include="Google.GenAI" Version="1.21.0" />
@@ -81,5 +87,13 @@
     <PackageCertificateThumbprint>04CE219186207284F06124B9A39ABEE7C115BB9F</PackageCertificateThumbprint>
     <PackageCertificateKeyFile>EarthMeet_TemporaryKey.pfx</PackageCertificateKeyFile>
     <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+    <Authors>KIT Environment Circle, "Earth"</Authors>
+    <Description>Meeting recording App with AI integrations.</Description>
+    <Copyright>2026 KIT Environmental Circle Earth</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/KIT-Environmental-Circle-Earth/EarthMeet</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 </Project>
